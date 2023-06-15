@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 import './ProductCard.scss';
 
-import CurrencyFormat from 'components/general/CurrencyFormat';
-import Rating from 'components/general/Rating';
-import AddToCard from 'components/product/AddToCart';
-import { calculatePriceDetails } from 'utils.js/product';
+import CurrencyFormat from '../../components/general/CurrencyFormat.js';
+import Rating from '../../components/general/Rating.js';
+import AddToCard from '../../components/product/AddToCart.js';
+import { calculatePriceDetails } from '../../utils.js/product.js';
 
 function ProductCard({ className, product }) {
   const { finalPrice, basePrice, isDiscounted } = calculatePriceDetails(

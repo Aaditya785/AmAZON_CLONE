@@ -2,9 +2,9 @@ import React from 'react';
 
 import './index.scss';
 
-import { useCartState } from 'cart-context';
+import { useCartState } from '../../cart-context.js';
 import CartItem from './CartItem';
-import CurrencyFormat from 'components/general/CurrencyFormat';
+import CurrencyFormat from '../../components/general/CurrencyFormat.js';
 
 function CartPage() {
   const { products, totalQuantity, totalPrice } = useCartState();

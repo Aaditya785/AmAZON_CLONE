@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './components/header';
 import CartPage from './pages/cart';
@@ -14,23 +14,15 @@ function App() {
       <Header />
 
       <div className="page-container">
-        <Switch>
-          <Route exact path="/cart">
-            <CartPage />
-          </Route>
+        <Routes>
+          <Route  path="/cart" element={<CartPage />} />
 
-          <Route exact path="/product/:productId">
-            <ProductPage />
-          </Route>
+          <Route  path="/product/:productId" element={<ProductPage />} />
 
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
+          <Route  path="/login" element={<LoginPage />} />
 
-          <Route>
-            <HomePage />
-          </Route>
-        </Switch>
+          <Route  path="/" element={<HomePage />} />
+        </Routes>
       </div>
     </Router>
   );

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import './Cart.scss';
 
-import { useCartState } from 'cart-context';
+import { useCartState } from '../../cart-context.js';
 
 function Cart() {
   const { totalQuantity } = useCartState();
